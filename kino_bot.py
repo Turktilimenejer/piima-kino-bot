@@ -66,7 +66,7 @@ def send_movie_by_number(message):
         markup = types.InlineKeyboardMarkup()
         btn = types.InlineKeyboardButton("🔗 Kanalga a’zo bo‘lish", url=f"https://t.me/{CHANNEL_USERNAME.strip('@')}")
         markup.add(btn)
-        bot.send_message(user_id, "❗ Avval kanalga a’zo bo‘ling", reply_markup=markup)
+        bot.send_message(user_id, "📛 Avval kanalga a’zo bo‘ling: " + CHANNEL_USERNAME, reply_markup=markup)
         return
 
     movies = load_movies()
